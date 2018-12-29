@@ -13,7 +13,7 @@ class Listing(models.Model):
     price = models.IntegerField()
     bedroom = models.IntegerField()
     #bathroom = models.IntegerField(max_digits=2, decimal_places=1)
-    bathroom = models.DecimalField(max_digits=2, decimal_places=2)
+    bathroom = models.DecimalField(max_digits=2, decimal_places=1)
     garage = models.IntegerField(default=0)
     sqft = models.IntegerField()
     lot_size = models.DecimalField(max_digits=5, decimal_places=1)
