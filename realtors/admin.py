@@ -1,6 +1,8 @@
 from django.contrib import admin
 
-from .models import Realtors
+#from .models import Realtors
+from realtors.models import Realtor
+
 
 class RealtorsAdmin(admin.ModelAdmin):
     list_display = ('id','name', 'email', 'hire_date')
@@ -8,4 +10,4 @@ class RealtorsAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     list_per_page = 25
 
-admin.site.register(Realtors, RealtorsAdmin)
+admin.site.register(Realtor, RealtorsAdmin)

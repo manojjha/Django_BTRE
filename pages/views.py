@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from listings.models import Listing
-from realtors.models import Realtors
+from realtors.models import Realtor
 
 # Create your views here.
 def index(request):
@@ -16,13 +16,13 @@ def index(request):
 
 def about(request):
     #Get All realtors
-    realtors = Realtors.objects.order_by('-hire_date')
+    realtors = Realtor.objects.order_by('-hire_date')
 
     #Get MVP
-    mvp_realtors = Realtors.objects.all().filter(is_mvp=True)
+    mvp_realtors = Realtor.objects.all().filter(is_mvp=True)
 
     context = {
-        'realtors' : realtors,
+        'realtors' : realtor,
         'mvp_realtors' : mvp_realtors
     }
 
